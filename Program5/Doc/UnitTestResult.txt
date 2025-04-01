@@ -1,0 +1,83 @@
+nmdr@cloudshell:~/projects/css430/Project5UnitTest/filesystem_unit_test$ mvn test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.example:filesytem_unit_test >-------------------
+[INFO] Building filesytem_unit_test 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ filesytem_unit_test ---
+[INFO] skip non existing resourceDirectory /home/nmdr/projects/css430/Project5UnitTest/filesystem_unit_test/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ filesytem_unit_test ---
+[INFO] Changes detected - recompiling the module! :input tree
+[INFO] Compiling 10 source files with javac [debug target 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ filesytem_unit_test ---
+[INFO] skip non existing resourceDirectory /home/nmdr/projects/css430/Project5UnitTest/filesystem_unit_test/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ filesytem_unit_test ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 5 source files with javac [debug target 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ filesytem_unit_test ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.DirectoryTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.121 s -- in com.example.DirectoryTest
+[INFO] Running com.example.FileSystemTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.109 s -- in com.example.FileSystemTest
+[INFO] Running com.example.SuperBlockTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.095 s -- in com.example.SuperBlockTest
+[INFO] Running com.example.InodeTest
+Inode Debug Information:
+  Length: 0
+  Count: 0
+  Flag: 1
+  Direct Pointers:
+    direct[0]: -1
+    direct[1]: -1
+    direct[2]: -1
+    direct[3]: -1
+    direct[4]: -1
+    direct[5]: -1
+    direct[6]: -1
+    direct[7]: -1
+    direct[8]: -1
+    direct[9]: -1
+    direct[10]: -1
+  Indirect Pointer: -1
+End Inode Debug Information.
+Inode Debug Information:
+  Length: 919
+  Count: 18
+  Flag: 2
+  Direct Pointers:
+    direct[0]: 92
+    direct[1]: 361
+    direct[2]: 645
+    direct[3]: 402
+    direct[4]: 470
+    direct[5]: 680
+    direct[6]: 692
+    direct[7]: 379
+    direct[8]: 427
+    direct[9]: 639
+    direct[10]: 209
+  Indirect Pointer: 601
+End Inode Debug Information.
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.077 s -- in com.example.InodeTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.752 s
+[INFO] Finished at: 2025-03-20T19:35:25Z
+[INFO] ------------------------------------------------------------------------

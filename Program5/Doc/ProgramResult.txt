@@ -1,0 +1,48 @@
+nmdr@cloudshell:~/projects/css430/TestP5$  /usr/bin/env /usr/lib/jvm/java-17-openjdk-amd64/bin/java @/tmp/cp_5bezgy8y582ejnpnu2xx7swrk.argfile Boot 
+threadOS ver 2.1:
+BOOT 0: Starting Operating System
+BOOT 1: Scheduler Started
+BOOT 2: Disk Subsystem Initialized and Started
+BOOT 3: Cache Memory Simulation Instantiated
+BOOT 4: Synchronized Queues Instantiated
+BOOT 5: File System Instantiated
+Type ? for help
+threadOS: a new thread (thread=Thread[Thread-3,2,main] tid=0 pid=-1)
+-->l Test5
+l Test5
+threadOS: a new thread (thread=Thread[Thread-5,2,main] tid=1 pid=0)
+1: format( 48 )...................successfully completed
+Correct behavior of format......................2
+2: fd = open( "css430", "w+" )....successfully completed
+Correct behavior of open........................2
+3: size = write( fd, buf[16] )....successfully completed
+Correct behavior of writing a few bytes.........2
+4: close( fd )....................successfully completed
+Correct behavior of close.......................2
+5: reopen and read from "css430"..successfully completed
+Correct behavior of reading a few bytes.........2
+6: append buf[32] to "css430".....successfully completed
+Correct behavior of appending a few bytes.......1
+7: seek and read from "css430"....successfully completed
+Correct behavior of seeking in a small file.....1
+8: open "css430" with w+..........successfully completed
+Correct behavior of read/writing a small file.0.5
+9: fd = open( "bothell", "w" )....successfully completed
+10: size = write( fd, buf[6656] ).successfully completed
+Correct behavior of writing a lot of bytes....0.5
+11: close( fd )....................successfully completed
+12: reopen and read from "bothell"buf[1] = 0 (wrong)
+13: append buf[32] to "bothell"...buf[1] = 0 buf6656 = 1
+14: seek and read from "bothell"...seek(fd,512 * 11,0)=32 (wrong)
+15: open "bothell" with w+.........tmpBuf[1]=0 (wrong)
+16: delete("css430")..............successfully completed
+Correct behavior of delete....................0.5
+17: create uwb0-29 of 512*13......successfully completed
+Correct behavior of creating over 40 files ...0.5
+18: uwb0 read b/w Test5 & Test6...
+threadOS: a new thread (thread=Thread[Thread-7,2,main] tid=2 pid=1)
+Test6.java: fd = 3Test6.java: tmpBuf[0] = 16 buf16[0] = 0 (wrong)
+fail
+Test6.java terminated
+tmpBuf[0]=16 should be 100
+Test completed
